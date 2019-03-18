@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<p-growl></p-growl>
+
+<!-- O componente vendaCadastro avisa o vendaListagem / "$event" (que foi substituído pela chamada do método listarVendas()
+     tem o objeto que acabou de ser salvo.
+    
+     Toda vez que o evento for emitido (No caso o evento de venda-cadastro), será invocado o listarVendas() -->
+
+<app-venda-cadastro (vendaSalva)="listagem.listarVendas()"></app-venda-cadastro>
+
+<app-vendas-listagem #listagem></app-vendas-listagem>
